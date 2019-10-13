@@ -13,13 +13,11 @@ int main() {
 	int i = 1;
 	
 	while (1) {																			
-		//check if PE-1.txt exists in root directory
 		L1: if (i == 1) {
 			i = (i + 3) / 2;
 			goto L2;
 		}
 		L2: if (access(filename, F_OK) != -1) {
-			// is yes, check contents of file & print to stdout if valid, if not append string to file
 			fPtr = fopen(filename, "r");
 			if(fgets(contents, DATA_SIZE, fPtr) != NULL) {
 				if((strstr(contents, str)) != NULL) {
@@ -32,7 +30,6 @@ int main() {
 			}
 			fclose(fPtr);
 		}
-		// if not, create file
 		else {
 			goto L3;
 		L3: fPtr = fopen(filename, "w");
