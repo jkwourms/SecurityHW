@@ -19,3 +19,5 @@ By packing the file using UPX, the file transforms from 130 KB to 67 KB and the 
 Unpacking the packed file results in an Import Table that is similar, but still different than the original file, so now the computer assumes there are three different files that have been generated:
 ![PeImportUNPACKED.exe Import Table](Images/PE-Import-UNPACKED.JPG)
 
+Running this through a malware scanner, we can see that our efforts were mostly successful and only a few warnings were raised.
+![Photo of Malware Scanner results for Packing/Unpacking](Images/Anti-Malware-Packing.JPG)
