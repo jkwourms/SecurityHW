@@ -5,6 +5,7 @@ PE-Import.exe is the original file we will be altering in various ways.
 
 ## PE-Import.exe
 The function of this file is to determine whether there is a PE-1.txt file containing the string "I want to learn PE file format!". If there is a file, then the executable will simply return that string contained in the file. However, if the file does not already exist, the executable will create that file.
+The PE-Import.c file shows the code that is used in the PE-Import.exe file.
 
 
 ## Packing
@@ -21,3 +22,12 @@ Unpacking the packed file results in an Import Table that is similar, but still 
 
 Running this through a malware scanner, we can see that our efforts were mostly successful and only a few warnings were raised.
 ![Photo of Malware Scanner results for Packing/Unpacking](Images/Anti-Malware-Packing.JPG)
+
+
+## Obfuscation
+Obfuscation describes the action of hiding the underlying logic of the program in order to prevent others from having any knowledge about the underlying code. This can be done through adding garbage commands, unnecessary jumps, and many other techniques. 
+
+## PE-Import-Obfuscation.exe
+In our case, we created PE-Import-Obfuscation.exe which uses jumps and unnecessary variables to hide the purpose of the program & change the signature of the executable file.
+The PE-Import-Obfuscation.c file shows the code that is used in the PE-Import-Obfuscation.exe file.
+
